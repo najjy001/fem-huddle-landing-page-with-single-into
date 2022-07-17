@@ -1,5 +1,8 @@
-@use 'reset';
-@use 'globals';
+@forward 'reset';
+@forward 'globals';
+@forward 'header';
+@forward 'main';
+@forward 'icon';
 
 .overlay {
     position: fixed;

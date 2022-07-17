@@ -1,0 +1,15 @@
+@use 'utility' as u;
+
+.header{
+
+    &__logo {
+        background-image: url(/images/logo.svg);
+        background-size: u.vw(130px) u.vw(31px);
+        text-align: left;
+        background-position: left center;
+        background-repeat: no-repeat;
+        height: u.vw(32px);
+        margin-top: u.vw(32px);
+
+    }
+}

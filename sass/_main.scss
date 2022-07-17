@@ -1,0 +1,53 @@
+@use 'utility' as u;
+
+.main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    margin-top: u.vw(60px);
+    
+    &__left{
+        margin: 0 u.vw(5px);
+        width: u.vw(300px);
+        height: u.vw(214px);
+        background-image: url(/public/images/illustration-mockups.svg);
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    &__right{
+        color: white;
+        font-family: 'Poppins', sans-serif;
+        text-align: center;
+        margin-top: u.vw(60px);
+        h1{
+            font-weight: 600;
+            font-size: u.vw(24px);
+        }
+
+        p{
+            font-family: 'Open Sans', sans-serif;
+            font-weight: 400;
+            margin-top: u.vw(15px);
+            font-size: u.vw(16px);
+            letter-spacing: u.vw(0.1px);
+
+        }
+
+    }
+
+    &__register{
+        
+        background-color: white;
+        color: var(--Violet);
+        border: none;
+        height: u.vw(40px);
+        width: u.vw(200px);
+        border-radius: u.vw(20px);
+        margin-top: u.vw(24px);
+        font-weight: 400;
+        font-size: u.vw(12px);
+
+    }
+}

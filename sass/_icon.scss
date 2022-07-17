@@ -1,0 +1,21 @@
+@use 'utility' as u;
+
+.icon{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 63px;
+    gap: 10px;
+    color: white;
+
+    &__circle{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: u.vw(28px);
+        height: u.vw(28px);
+        border: u.vw(1px) solid white;
+        font-size: 14px;
+        border-radius: 50%;
+    }
+}
