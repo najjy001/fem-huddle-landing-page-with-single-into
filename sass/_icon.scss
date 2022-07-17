@@ -4,9 +4,17 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: 63px;
-    gap: 10px;
-    color: white;
+    margin-top: u.vw(63px);
+    margin-bottom: u.vw(40px);
+    gap: u.vw(10px);
+    
+    @include u.breakpoint-up(medium){
+        justify-content: right;
+        margin-top: u.vw(18px, 1440px);
+        margin-bottom: u.vw(40px, 1440px);
+        gap: u.vw(16px, 1440px);
+        padding-right: 16px;
+    }
 
     &__circle{
         display: flex;
@@ -15,7 +23,20 @@
         width: u.vw(28px);
         height: u.vw(28px);
         border: u.vw(1px) solid white;
-        font-size: 14px;
+        color: white;
+        font-size: u.vw(14px);
         border-radius: 50%;
+
+        &:hover{
+            border-color: var(--SoftMagenta);
+            color: var(--SoftMagenta);
+        }
+
+        @include u.breakpoint-up(medium){
+            font-size: u.vw(20px, 1440px);
+            width: u.vw(40px, 1440px);
+            height: u.vw(40px, 1440px);
+            border: u.vw(1px, 1440px) solid white;
+        }
     }
 }

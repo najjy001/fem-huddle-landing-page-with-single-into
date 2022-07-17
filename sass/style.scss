@@ -4,12 +4,3 @@
 @forward 'main';
 @forward 'icon';
 
-.overlay {
-    position: fixed;
-    top: 0;
-    background-image: url(/images/mobile-design.jpg);
-    background-size: cover;
-    height: 800px;
-    width: 375px;
-    opacity: 0.2;
-}

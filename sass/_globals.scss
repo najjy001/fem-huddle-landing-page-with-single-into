@@ -14,8 +14,32 @@ body{
     background-position: top left;
     background-repeat: no-repeat;
     background-size: contain;
+    
+    @include u.breakpoint-up(medium){
+        background-image: none;
+        background-size: 50%;
+        background-size: 10% 10%;
+
+        &::before{
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            z-index: -1;
+            background-image: url(/images/bg-desktop.svg);
+            background-size: u.vw(1318px, 1440px) u.vw(800px, 1440px);
+            background-repeat: no-repeat;
+        }
+    }
 }
 
 .container{
     margin: 0 u.vw(32px);
+
+    @include u.breakpoint-up(medium){
+        margin: 0 u.vw(50px, 1440px);
+    }
+
 }

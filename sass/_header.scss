@@ -10,6 +10,13 @@
         background-repeat: no-repeat;
         height: u.vw(32px);
         margin-top: u.vw(32px);
+        margin-left: u.vw(20px, 1440px);
 
+        @include u.breakpoint-up(medium){
+            background-size: cover;
+            width: u.vw(216px, 1440px);
+            height: u.vw(45px, 1440px);
+            margin-top: u.vw(57px, 1440px);
+        }
     }
 }

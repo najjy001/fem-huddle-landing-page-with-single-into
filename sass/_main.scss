@@ -7,23 +7,54 @@
     align-content: center;
     margin-top: u.vw(60px);
     
+    @include u.breakpoint-up(medium){
+        flex-direction: row;   
+        margin-top: u.vw(90px, 1440px);
+    }
+
+    
     &__left{
-        margin: 0 u.vw(5px);
+        flex-wrap: nowrap;
+        flex-grow: 2;
         width: u.vw(300px);
         height: u.vw(214px);
         background-image: url(/public/images/illustration-mockups.svg);
         background-size: cover;
         background-repeat: no-repeat;
+        
+        @include u.breakpoint-up(medium){
+            margin-left: u.vw(24px, 1440px);
+            width: u.vw(590px, 1440px);
+            height: u.vw(510px, 1440px);
+            background-size:  u.vw(708px, 1440px) u.vw(507px, 1440px);
+        }
     }
 
     &__right{
+        flex-grow: 1;
         color: white;
         font-family: 'Poppins', sans-serif;
         text-align: center;
         margin-top: u.vw(60px);
+
+        @include u.breakpoint-up(medium){
+            text-align: left;
+            padding-top: u.vw(43px, 1440px);
+            padding-left: u.vw(12px, 1440px);
+            padding-right: u.vw(18px, 1440px);
+            margin: 0 u.vw(5px, 1440px);
+            width: u.vw(470px, 1440px);
+            
+        }
         h1{
             font-weight: 600;
             font-size: u.vw(24px);
+         
+            @include u.breakpoint-up(medium){
+                font-size: u.vw(42px, 1440px);
+                letter-spacing: -1.3px;
+                line-height: 1.45;
+            }
         }
 
         p{
@@ -32,6 +63,13 @@
             margin-top: u.vw(15px);
             font-size: u.vw(16px);
             letter-spacing: u.vw(0.1px);
+
+            @include u.breakpoint-up(medium){
+                margin-top: u.vw(20px, 1440px);
+                font-size: u.vw(18px, 1440px);
+                letter-spacing: 0px;
+                line-height: 1.5;
+            }
 
         }
 
@@ -48,6 +86,20 @@
         margin-top: u.vw(24px);
         font-weight: 400;
         font-size: u.vw(12px);
+
+        &:hover{
+            background-color: var(--SoftMagenta);
+            color: white;
+        }
+
+        @include u.breakpoint-up(medium){
+            height: u.vw(55px, 1440px);
+            width: u.vw(200px, 1440px);
+            border-radius: u.vw(30px, 1440px);
+            margin-top: u.vw(24px, 1440px);
+            font-size: u.vw(18px, 1440px);
+        }
+
 
     }
 }
